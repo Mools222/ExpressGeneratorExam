@@ -32,6 +32,8 @@ Dog er størstedelen af HTML'en oversat til Pug-format (se https://pugjs.org).
 ### 2.1 RESTful API
 
 Serveren tilbyder en fungerende RESTful API. Dokumentationen hertil findes på startsiden.
+Der kan f.eks. sendes diverse HTTP requests til API'en gennem Postman. 
+POST requests kan sendes via formen på path "/indtastning".
 
 ### 2.2 Komponent
 
@@ -41,4 +43,10 @@ Dataen kan ses i tabelform på følgende path: /moduleTable
 
 ## 3. Deployment
 
-Løsningen er hosted på Google Cloud her:
+### 3.1 Module
+
+Toilet-modulet kan findes på NPMJS her: https://www.npmjs.com/package/moolstoilets
+
+### 3.2 Server
+
+Løsningen er hosted på Google Cloud her: http://35.228.82.10/

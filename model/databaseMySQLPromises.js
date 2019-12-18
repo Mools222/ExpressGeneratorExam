@@ -16,7 +16,7 @@ exports.read = async function (tableName, primaryKey, id) {
         connection = await getConnection();
         let query = `SELECT * FROM ${tableName}` + (id ? ` WHERE ${primaryKey} = ${id}` : "");
         let result = await connection.query(query);
-        return result.length === 0 ? await Promise.reject(new Error(`No ${tableName} data found`)) : result;
+        return result.length === 0 ? await Promise.reject(new Error(`Ingen resurse-data fundet`)) : result;
     } catch (e) {
         throw e;
     } finally {
@@ -61,7 +61,7 @@ exports.deleteSomething = async function (resource_id) { // "delete" is a keywor
         connection = await getConnection();
         let query = `DELETE FROM resources WHERE resource_id = '${resource_id}'`;
         let result = await connection.query(query);
-        return result.affectedRows === 0 ? await Promise.reject() : result;
+        return result.affectedRows === 0 ? await Promise.reject(new Error(`Ingen resurse med id ${resource_id}`)) : result;
     } catch (e) {
         throw e;
     } finally {
