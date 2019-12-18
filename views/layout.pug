@@ -19,7 +19,6 @@ html(lang='da')
         - var navbar = { 'Start': '/', 'Resurcer': '/resurcer', 'Indtastning': '/indtastning', 'Offentlige Toiletter JSON' : '/moduleJSON', 'Offentlige Toiletter Tabel' : '/moduleTable', 'Resurcer JSON': '/api/resurse'};
         .navBar
             each val, key in navbar
-                //a(href=val)= key
                 a(id=(val === page ? "active" : null) href=val)= key
         // Content
         .content
