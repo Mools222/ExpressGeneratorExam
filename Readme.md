@@ -16,9 +16,10 @@ Løsningen gør brug af Node.js web application frameworket Express.
 Projektet er genereret vha. Express application generator.
 Se dette link for yderligere info: https://expressjs.com/en/starter/generator.html
 
-#### 1.1.3 MySQL
+### 1.1.3 MySQL-datbase
 
-Databasen kører på en MySQL-server.
+Databasen hedder "mefi". Den indeholder to tabeller, "categories" og "resources".
+Hver table har en primary key. Tabellen "categories" har en foreign key kaldet "category_id", som peger på primary key'en i "categories". Dette sikrer, at kategorier-navne ikke gentages. I stedet angives blot et id. Dette gør det desuden nemt at ændre kategori-navne for alle resurser i databasen.
 
 ### 1.2 Front-end
 
@@ -41,17 +42,12 @@ Serveren giver desuden adgang til et modul, som henter data om offentlige toilet
 Dataen kan hentes på JSON på følgende path: /moduleJSON
 Dataen kan ses i tabelform på følgende path: /moduleTable
 
-### 2.3 MySQL-datbase
-
-Databasen hedder "mefi". Den indeholder to tabeller, "categories" og "resources".
-Hver table har en primary key. Tabellen "categories" har en foreign key kaldet "category_id", som peger på primary key'en i "categories". Dette sikrer, at kategorier-navne ikke gentages. I stedet angives blot et id. Dette gør det desuden nemt at ændre kategori-navne for alle resurser i databasen
-
 ## 3. Deployment
 
 ### 3.1 Module
 
 Toilet-modulet kan findes på NPMJS her: https://www.npmjs.com/package/moolstoilets
 
-### 3.2 Server
+### 3.2 Node.js-server
 
 Løsningen er hosted på Google Cloud her: http://35.228.82.10/
