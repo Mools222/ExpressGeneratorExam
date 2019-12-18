@@ -6,17 +6,18 @@
 
 #### 1.1.1 Node.js
 
-Appen er en web server, som fungerer via det indbyggede HTTP-modul i Node.js.
+Appen er en web-server, som fungerer via det indbyggede HTTP-modul i Node.js.
+
 Se dette link for yderligere info: https://nodejs.dev/the-nodejs-http-module
 
 #### 1.1.2 Express
 
-Løsningen gør brug af Node.js web application frameworket Express.
+Løsningen gør brug af Node.js-web-application-frameworket Express.
 
 Projektet er genereret vha. Express application generator.
 Se dette link for yderligere info: https://expressjs.com/en/starter/generator.html
 
-### 1.1.3 MySQL-datbase
+#### 1.1.3 MySQL-datbase
 
 Databasen hedder "mefi". Den indeholder to tabeller, "categories" og "resources".
 Hver table har en primary key. Tabellen "categories" har en foreign key kaldet "category_id", som peger på primary key'en i "categories". Dette sikrer, at kategorier-navne ikke gentages. I stedet angives blot et id. Dette gør det desuden nemt at ændre kategori-navne for alle resurser i databasen.
