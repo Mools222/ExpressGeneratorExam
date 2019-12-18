@@ -1,0 +1,241 @@
+* { /* * = Simple selector of the type universal selector (https://www.w3schools.com/css/css_selectors.asp) */
+  box-sizing: border-box; /* If you set box-sizing: border-box; on an element padding and border are included in the width and height */
+}
+
+body { /* body = Simple selector of the type element selector (https://www.w3schools.com/css/css_selectors.asp) */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Set the height of the body to 100% of the viewport. This is for making the footer stick to the bottom */
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+  /*background-color: slategrey;*/
+  /*margin: 0 10%;*/
+}
+
+/**********************************************************************************/
+/* Header */
+/**********************************************************************************/
+
+.header {
+  padding: 20px;
+  text-align: center;
+  background: red;
+  color: white;
+}
+
+.header h1 {
+  font-size: 2.5em; /* em = Relative to the font-size of the element (2em means 2 times the size of the current font) */
+  margin: 15px;
+}
+
+.header p {
+  font-size: 1.5em;
+  margin: 10px;
+}
+
+/**********************************************************************************/
+/* Navigation bar */
+/**********************************************************************************/
+
+.navBar {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #333333;
+}
+
+.navBar a { /* .navBar a = The space is a combinator selector of type descendant selector (https://www.w3schools.com/css/css_combinators.asp) */
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.navBar a:hover {
+  background-color: lightgray;
+  color: black;
+}
+
+#active {
+  background-color: darkred;
+  /*color: black;*/
+}
+
+/**********************************************************************************/
+/* Content */
+/**********************************************************************************/
+
+.content {
+  flex: 1; /* Let the content div grow. This is for making the footer stick to the bottom */
+  padding: 20px;
+  background-color: white;
+}
+
+/**********************************************************************************/
+/* Table */
+/**********************************************************************************/
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+th {
+  text-align: left;
+  background-color: red;
+  color: white;
+}
+
+th, td {
+  padding: 8px;
+  border: 1px solid black;
+}
+
+tr:nth-child(even) { /* tr:nth-child = Pseudo-class selector (https://www.w3schools.com/css/css_pseudo_classes.asp) */
+  background-color: #f2f2f2
+}
+
+tr:hover {
+  background-color: lightgray;
+}
+
+/**********************************************************************************/
+/* Form */
+/**********************************************************************************/
+
+input[type=text] { /* [type=text] = Attribute selector (https://www.w3schools.com/css/css_attribute_selectors.asp) */
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type=submit] {
+  /*width: 100%;*/
+  background-color: red;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: darkred;
+}
+
+.formContainer {
+  width: 100%;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/**********************************************************************************/
+/* API documentation */
+/**********************************************************************************/
+
+.topContainer {
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-size: 1.5em;
+  /*width: 50%;*/
+}
+
+.reqContainer, .bodyContainer pre {
+  margin: 0;
+  padding: 10px;
+}
+
+.reqContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.reqContainer > * {
+  margin: 0 80px 0 0;
+}
+
+.badge {
+  color: white;
+  padding: 10px 10px;
+  min-width: 120px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.path {
+  min-width: 200px;
+  width: 10%;
+}
+
+.expandAndCollapse {
+  margin: 0 10px 0 auto;
+}
+
+.bodyContainer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.get {
+  border: 2px solid rgb(94, 175, 255);
+  background-color: rgba(94, 175, 255, 0.2);
+}
+
+.get .badge {
+  background-color: rgb(94, 175, 255);
+}
+
+.post {
+  border: 2px solid rgb(77, 199, 144);
+  background-color: rgba(77, 199, 144, 0.2);
+}
+
+.post .badge {
+  background-color: rgb(77, 199, 144);
+}
+
+.put {
+  border: 2px solid rgb(237, 172, 55);
+  background-color: rgba(237, 172, 55, 0.2);
+}
+
+.put .badge {
+  background-color: rgb(237, 172, 55);
+}
+
+.delete {
+  border: 2px solid rgb(221, 69, 70);
+  background-color: rgba(221, 69, 70, 0.2);
+}
+
+.delete .badge {
+  background-color: rgb(221, 69, 70);
+}
+
+/**********************************************************************************/
+/* Footer */
+/**********************************************************************************/
+
+.footer { /* .footer = Simple selector of the type class selector (https://www.w3schools.com/css/css_selectors.asp) */
+  padding: 20px;
+  background: lightgray;
+}
+
+.footer * {
+  margin: 10px;
+  text-align: center;
+}
+
+#dateTime { /* #dateTime = Simple selector of the type id selector (https://www.w3schools.com/css/css_selectors.asp) */
+  text-align: right;
+}

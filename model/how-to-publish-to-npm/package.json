@@ -1,0 +1,14 @@
+{
+  "name": "moolstoilets",
+  "version": "1.0.0",
+  "description": "Get Danish public toilets as JSON",
+  "main": "publicToiletsModule.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "toilets"
+  ],
+  "author": "mools222",
+  "license": "ISC"
+}

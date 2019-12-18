@@ -1,0 +1,32 @@
+doctype html
+html(lang='da')
+    head
+        title= title
+        // To display an HTML page correctly, a web browser must know the character set used in the page. The default character set for HTML5 is UTF-8.
+        meta(charset='UTF-8')
+        meta(name='description', content='Eksamensopgave')
+        meta(name='keywords', content='eksamen, html, css, javascript')
+        meta(name='author', content='Morten Olsen')
+        // The viewport is the user's visible area of a web page. The width=device-width part sets the width of the page to follow the screen-width of the device (which will vary depending on the device). The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser.
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        link(rel='stylesheet', href='/stylesheets/style.css')
+    body
+        // Header
+        .header
+            h1 Mefi
+            p Støtte Til Hjemløse
+        // Navbar
+        - var navbar = { 'Start': '/', 'Resurcer': '/resurcer', 'Indtastning': '/indtastning', 'Offentlige Toiletter JSON' : '/moduleJSON', 'Offentlige Toiletter Tabel' : '/moduleTable', 'Resurcer JSON': '/api/resurse'};
+        .navBar
+            each val, key in navbar
+                //a(href=val)= key
+                a(id=(val === page ? "active" : null) href=val)= key
+        // Content
+        .content
+            block content
+        // Footer
+        - var date = new Date();
+        .footer
+            p Skabt af Morten Olsen
+            p#dateTime= date.toLocaleString("da-DK")
+        //script(src='/javascripts/scripts.js')

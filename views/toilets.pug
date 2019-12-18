@@ -1,0 +1,26 @@
+extends layout
+
+block content
+    h1 Offentlige toiletter
+    table
+        tr
+            th Id
+            th Navn
+            th Ejer
+            th Handikapvenlig
+            th Åbningstid
+            th Adresse
+            th Nr.
+            th Betaling
+            th Koordinater
+        each toilet in data
+            tr
+                td #{toilet.properties.id}
+                td #{toilet.properties.navn}
+                td #{toilet.properties.ejer}
+                td #{toilet.properties.handikapvenlig}
+                td #{toilet.properties["åbningstid"]}
+                td #{toilet.properties.adresse}
+                td #{toilet.properties.nr}
+                td #{toilet.properties.betaling}
+                td #{toilet.geometry.coordinates["0"]} #{toilet.geometry.coordinates["1"]}

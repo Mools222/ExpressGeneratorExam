@@ -1,0 +1,22 @@
+[
+  {
+    "by": "Køge",
+    "kategori": "Mad",
+    "navn": "Køkkenet",
+    "beskrivelse": "Hjælper med mad",
+    "adresse": "Eksempelvej 22",
+    "telefon": "12345678",
+    "aabningstider": "Ma-Ons 12-18",
+    "website": "https://kitchen.dk"
+  },
+  {
+    "by": "Test1",
+    "kategori": "Test2",
+    "navn": "Test3",
+    "beskrivelse": "Test4",
+    "adresse": "Test5",
+    "telefon": "Test6",
+    "aabningstider": "Test7",
+    "website": "https://test.dk"
+  }
+]

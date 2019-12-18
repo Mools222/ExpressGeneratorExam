@@ -1,0 +1,71 @@
+extends layout
+
+block content
+    h1 Velkommen til #{title}
+
+    hr
+
+    h1 API-dokumentation
+
+    .topContainer.get
+        .reqContainer
+            .badge GET
+            .path
+                kbd /api/resurse
+            p Få en liste over resurser
+
+    .topContainer.post
+        .reqContainer
+            .badge POST
+            .path
+                kbd /api/resurse
+            p Tilføj en ny resurse
+            .expandAndCollapse +
+        .bodyContainer
+            pre Eksempel-body:
+                | {
+                |   "city": "TestNavn",
+                |   "category_id": 2,
+                |   "resource_name": "Test3",
+                |   "description": "Test4",
+                |   "address": "Test5",
+                |   "phone": "Test6",
+                |   "open_hours": "Test7",
+                |   "website": "Test8"
+                | }
+
+    .topContainer.get
+        .reqContainer
+            .badge GET
+            .path
+                kbd /api/resurse/:id
+            p Hent resursen med det angivne id
+
+    .topContainer.put
+        .reqContainer
+            .badge PUT
+            .path
+                kbd /api/resurse/:id
+            p Opdater resursen med det angivne id
+            .expandAndCollapse +
+        .bodyContainer
+            pre Eksempel-body:
+                | {
+                |   "city": "NytNavn",
+                |   "category_id": 2,
+                |   "resource_name": "Test3",
+                |   "description": "Test4",
+                |   "address": "Test5",
+                |   "phone": "Test6",
+                |   "open_hours": "Test7",
+                |   "website": "Test8"
+                | }
+
+    .topContainer.delete
+        .reqContainer
+            .badge DELETE
+            .path
+                kbd /api/resurse/:id
+            p Slet resursen med det angivne id
+
+    script(src='/javascripts/scriptsApi.js')
