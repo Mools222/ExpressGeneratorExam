@@ -41,6 +41,11 @@ Serveren giver desuden adgang til et modul, som henter data om offentlige toilet
 Dataen kan hentes på JSON på følgende path: /moduleJSON
 Dataen kan ses i tabelform på følgende path: /moduleTable
 
+### 2.3 MySQL-datbase
+
+Databasen hedder "mefi". Den indeholder to tabeller, "categories" og "resources".
+Hver table har en primary key. Tabellen "categories" har en foreign key kaldet "category_id", som peger på primary key'en i "categories". Dette sikrer, at kategorier-navne ikke gentages. I stedet angives blot et id. Dette gør det desuden nemt at ændre kategori-navne for alle resurser i databasen
+
 ## 3. Deployment
 
 ### 3.1 Module
