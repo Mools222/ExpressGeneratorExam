@@ -4,7 +4,7 @@ function getConnection() {
     return mysql.createConnection({
         host: "127.0.0.1",
         user: "root",
-        password: "", // Seems that password can't be blank when deploying on Google Cloud (so I just chose "password")
+        password: "password", // Seems that password can't be blank when deploying on Google Cloud (so I just chose "password")
         database: "mefi",
         multipleStatements: false // Prevents some SQL injections
     });
